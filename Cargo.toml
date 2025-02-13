@@ -1,0 +1,26 @@
+[package]
+name = "issue-hunter"
+version = "0.1.1"
+edition = "2021"
+authors = ["Kould <kould2333@gmail.com>"]
+description = "A command line tool to capture the status of issue lists from multiple repositories"
+license       = "Apache-2.0"
+readme        = "README.md"
+repository    = "https://github.com/KKould/issue-hunter"
+keywords      = ["github", "issue"]
+categories    = ["development-tools"]
+
+[[bin]]
+name = "ih"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+chrono = { version = "0.4", features = ["serde"] }
+dirs = { version = "5" }
+kite_sql = { version = "0.1.1" }
+prettytable-rs = "0.1"
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
